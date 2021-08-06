@@ -1,0 +1,12 @@
+Bug ID
+Summary
+Status
+Priority
+Severity
+Environment
+Description
+Steps to reproduce
+Actual result
+Expected result
+Attachments
+
