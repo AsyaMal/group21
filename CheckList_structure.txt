@@ -1,0 +1,6 @@
+ID
+Preconditions
+Steps
+Expected result
+Comments
+
