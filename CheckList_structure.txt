@@ -1,6 +1,7 @@
 ID
+Title
 Preconditions
 Steps
 Expected result
-Comments
+ID BugReport
 
