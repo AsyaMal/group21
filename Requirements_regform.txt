@@ -33,5 +33,6 @@ http://itcareer.pythonanywhere.com/
 	- min 2, max 64 characters between "@" and ".";
 	- min 2, max 24 characters after ".";
 6. GUI
+7. Usability
 
 	

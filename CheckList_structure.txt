@@ -614,7 +614,7 @@ Value "Kate2112@gmail.com" appears in the input field
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 16
+###=ID BugReport 17
 =============
 =ID 52
 =Title The field "Email" allows special symbols: ".", "_", "-" to "@"
@@ -639,7 +639,7 @@ Enter another special symbols, e.g. "-" and "!"
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 17
+###=ID BugReport 18
 =============
 
 
