@@ -523,12 +523,7 @@
 							"value": "{{token}}",
 							"type": "text"
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					]
 				},
 				"url": {
 					"raw": "{{url}}get_test_user",
@@ -555,15 +550,30 @@
 							"// function getRandomIntInclusive(min, max) {\r",
 							"// }\r",
 							"// alert( random(1, 510) );\r",
-							"let Cur_ID = Math.floor(Math.random() * 510) + 1;\r",
-							"let jsonData = pm.response.json();\r",
+							"// let Cur_ID = Math.floor(Math.random() * 510) + 1;\r",
+							"// let jsonData = pm.response.json();\r",
 							"\r",
-							"pm.environment.set(\"Cur_ID\", jsonData.Cur_ID);\r",
+							"// pm.environment.set(\"Cur_ID\", jsonData.Cur_ID);\r",
 							"\r",
-							"pm.test(\"Body matches string\", function () {\r",
-							"    pm.expect(pm.response.text()).to.include(\"Cur_Abbreviation\");\r",
-							"});\r",
-							""
+							"// pm.test(\"Body matches string\", function () {\r",
+							"//     pm.expect(pm.response.text()).to.include(\"Cur_Abbreviation\");\r",
+							"// });\r",
+							"// let currency = pm.response.json();\r",
+							"// let randomCurrency = Math.floor(Math.random()*currency.length);\r",
+							"// console.log(currency);\r",
+							"// console.log(randomCurrency);\r",
+							"////////////\r",
+							"let jsondata = pm.response.json();\r",
+							"let i = jsondata.length;\r",
+							"console.log(jsondata.length);\r",
+							"\r",
+							"function getRandomInt(i) {\r",
+							"    return Math.floor(Math.random() * i);\r",
+							"}\r",
+							"console.log(jsondata[getRandomInt(i)]);\r",
+							"console.log(jsondata[getRandomInt(i)].Cur_ID);\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"curr_code\", jsondata[getRandomInt(i)].Cur_ID);"
 						],
 						"type": "text/javascript"
 					}
