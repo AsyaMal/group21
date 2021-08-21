@@ -680,7 +680,7 @@ Error massage
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  one character
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "K@gmail.com"
 2.Click on the free area
@@ -692,7 +692,7 @@ Error massage
 =Title The field "Email" allows min 5, max 128 charactersto "@". Enter  4 characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "Kate@gmail.com"
 2.Click on the free area
@@ -704,7 +704,7 @@ Error massage
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  5 characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "Kate1@gmail.com"
 2.Click on the free area
@@ -716,7 +716,7 @@ The value "Kate1@gmail.com" appears in the input field
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  6 characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "Kate12@gmail.com"
 2.Click on the free area
@@ -728,7 +728,7 @@ The value "Kate12@gmail.com" appears in the input field
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  61 characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "Kate123456Kate123456Kate123456Kate123456Kate123456Kate123456q@gmail.com"
 2.Click on the free area
@@ -740,7 +740,7 @@ The value "Kate123456Kate123456Kate123456Kate123456Kate123456Kate123456q@gmail.c
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  127 characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "Kate23456Kate123456Kate123456Kate123456Kate123456Kate123456qKate123456Kate123456Kate123456Kate123456Kate123456Kate123456qs@gmail.com"
 2.Click on the free area
@@ -752,7 +752,7 @@ The value "Kate123456Kate123456Kate123456Kate123456Kate123456Kate123456qKate1234
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  128 characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "Kate123456Kate123456Kate123456Kate123456Kate123456Kate123456qKate123456Kate123456Kate123456Kate123456Kate123456Kate123456qs@gmail.com"
 2.Click on the free area
@@ -760,15 +760,208 @@ The value "Kate123456Kate123456Kate123456Kate123456Kate123456Kate123456qKate1234
 The value "Kate0123456Kate123456Kate123456Kate123456Kate123456Kate123456qKate123456Kate123456Kate123456Kate123456Kate123456Kate123456qs@gmail.com" appears in the input field
 =ID BugReport
 =============
-=ID 65
+=ID 64
 =Title The field "Email" allows min 5, max 128 characters to "@". Enter  zero characters
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
-2.Click on the field "Password" 
+2.Click on the field "Email" 
 =Steps
 1.Enter "@gmail.com"
 2.Click on the free area
 =Expected result
 Error massage
 ###=ID BugReport 24
-
+=============
+=ID 65
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 2 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gm.com"
+2.Click on the free area
+=Expected result
+The value "Kate@gm.com" appears in the input field
+=ID BugReport
+=============
+=ID 66
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 1 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@g.com"
+2.Click on the free area
+=Expected result
+Error massage
+###=ID BugReport 25
+=============
+=ID 67
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter zero characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@.com"
+2.Click on the free area
+=Expected result
+Error massage
+###=ID BugReport 26
+=============
+=ID 68
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 31 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmailgmailgmailgmailgmailgmailg.com"
+2.Click on the free area
+=Expected result
+The value "Kate@gmailgmailgmailgmailgmailgmailg.com" appears in the input field
+=ID BugReport
+=============
+=ID 69
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 63 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmailgmailgmailgmailgmailgmailggmailgmailgmailgmailgmailgmailgf.com"
+2.Click on the free area
+=Expected result
+The value "
+1.Enter "Kate@gmailgmailgmailgmailgmailgmailggmailgmailgmailgmailgmailgmailgf.com" appears in the input field
+=ID BugReport
+=============
+=ID 70
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 64 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmailgmailgmailgmailgmailgmailggmailgmailgmailgmailgmailgmailgfg.com"
+2.Click on the free area
+=Expected result
+The value "Kate@gmailgmailgmailgmailgmailgmailggmailgmailgmailgmailgmailgmailgfg.com" appears in the input field
+=ID BugReport
+=============
+=ID 71
+=Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 65 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmailgmailgmailgmailgmailgmailggmailgmailgmailgmailgmailgmailgfgf.com"
+2.Click on the free area
+=Expected result
+Error massage
+###=ID BugReport 27
+=============
+=ID 72
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 2 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.co"
+2.Click on the free area
+=Expected result
+The value "Kate@gmail.co" appears in the input field
+=ID BugReport
+=============
+=ID 73
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 1 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.c"
+2.Click on the free area
+=Expected result
+Error massage
+###=ID BugReport 28
+=============
+=ID 74
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter zero characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail."
+2.Click on the free area
+=Expected result
+Error massage
+###=ID BugReport 29
+=============
+=ID 75
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 3 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.com"
+2.Click on the free area
+=Expected result
+The value "Kate@gmail.com" appears in the input field
+=ID BugReport
+=============
+=ID 76
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 10 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.comgmailcom"
+2.Click on the free area
+=Expected result
+The value "Kate@gmail.comgmailcom" appears in the input field
+=ID BugReport
+=============
+=ID 77
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 23 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.comgmailcomcomgmailcomcom"
+2.Click on the free area
+=Expected result
+The value "Kate@gmail.comgmailcomcomgmailcomcom" appears in the input field
+=ID BugReport
+=============
+=ID 78
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 24 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.comgmailcomcomgmailcomcoma"
+2.Click on the free area
+=Expected result
+The value "Kate@gmail.comgmailcomcomgmailcomcoma" appears in the input field
+=ID BugReport
+=============
+=ID 79
+=Title The field "Email" allows min 2, max 24 characters after ".". Enter 25 characters
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+2.Click on the field "Email" 
+=Steps
+1.Enter "Kate@gmail.comgmailcomcomgmailcomcomaq"
+2.Click on the free area
+=Expected result
+Error massage
+###=ID BugReport 30
+=============
+=ID 80
+=Title Check GUI
+=Preconditions
+1.Open http://itcareer.pythonanywhere.com/
+=Steps
+1.Check spelling
+2.Сheck the button
+3.Check placeholders
+=Expected result
+Error massage
+###=ID BugReport 31
+=============
