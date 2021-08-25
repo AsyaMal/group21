@@ -140,7 +140,7 @@ Value "Ka" appears in the input field
 1.Enter "Kate super--"
 2.Click on the free area
 =Expected result
-Value "Ka" appears in the input field 
+Value "Kate super--" appears in the input field 
 =ID BugReport
 ===============
 =ID 13
@@ -595,7 +595,6 @@ Error massage
 =Preconditions
 1.Open http://itcareer.pythonanywhere.com/
 2.Click on the field "Email" 
-3.Create email Kate2112@gmail.com
 =Steps
 1.Enter "Kate2112@gmail.com"
 2.Click on the free area
@@ -770,7 +769,7 @@ The value "Kate0123456Kate123456Kate123456Kate123456Kate123456Kate123456qKate123
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 24
+###=ID BugReport 23
 =============
 =ID 65
 =Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 2 characters
@@ -794,7 +793,7 @@ The value "Kate@gm.com" appears in the input field
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 25
+###=ID BugReport 24
 =============
 =ID 67
 =Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter zero characters
@@ -806,7 +805,7 @@ Error massage
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 26
+###=ID BugReport 25
 =============
 =ID 68
 =Title The field "Email" allows min 2, max 64 characters between "@" and ".". Enter 31 characters
@@ -855,7 +854,7 @@ The value "Kate@gmailgmailgmailgmailgmailgmailggmailgmailgmailgmailgmailgmailgfg
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 27
+###=ID BugReport 26
 =============
 =ID 72
 =Title The field "Email" allows min 2, max 24 characters after ".". Enter 2 characters
@@ -879,7 +878,7 @@ The value "Kate@gmail.co" appears in the input field
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 28
+###=ID BugReport 27
 =============
 =ID 74
 =Title The field "Email" allows min 2, max 24 characters after ".". Enter zero characters
@@ -891,7 +890,7 @@ Error massage
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 29
+###=ID BugReport 28
 =============
 =ID 75
 =Title The field "Email" allows min 2, max 24 characters after ".". Enter 3 characters
@@ -951,7 +950,7 @@ The value "Kate@gmail.comgmailcomcomgmailcomcoma" appears in the input field
 2.Click on the free area
 =Expected result
 Error massage
-###=ID BugReport 30
+###=ID BugReport 29
 =============
 =ID 80
 =Title Check GUI
@@ -959,9 +958,9 @@ Error massage
 1.Open http://itcareer.pythonanywhere.com/
 =Steps
 1.Check spelling
-2.Сheck the button
+2.Сheck the buttons
 3.Check placeholders
 =Expected result
-Error massage
-###=ID BugReport 31
+
+###=ID BugReport 30, 31, 32
 =============
