@@ -54,25 +54,26 @@ SELECT DISTINCT P.type, L.model, L.speed FROM Product AS P JOIN Laptop AS L ON P
 ===============
 19. Для каждого производителя, имеющего модели в таблице Laptop, найдите средний размер экрана выпускаемых им ПК-блокнотов.
 Вывести: maker, средний размер экрана.
-
+SELECT p.maker, AVG(l.screen) FROM product p JOIN laptop l ON p.model = l.model GROUP by p.maker;
 ===============
-20.
-
+20. Найдите производителей, выпускающих по меньшей мере три различных модели ПК. Вывести: Maker, число моделей ПК.
+SELECT maker, COUNT(model) FROM product WHERE type = 'pc' GROUP BY maker HAVING COUNT (DISTINCT model) >= 3
 ===============
-21.
-
+21. Найдите максимальную цену ПК, выпускаемых каждым производителем, у которого есть модели в таблице PC.
+Вывести: maker, максимальная цена.
+SELECT p.maker, MAX(pc.price) FROM product p JOIN pc ON p.model = pc.model GROUP by p.maker;
 ===============
-
-
+22. Для каждого значения скорости ПК, превышающего 600 МГц, определите среднюю цену ПК с такой же скоростью. Вывести: speed, средняя цена.
+SELECT speed, AVG(price) FROM pc WHERE speed > 600 GROUP BY speed;
 ===============
-
-
+23. Найдите производителей, которые производили бы как ПК со скоростью не менее 750 МГц, так и ПК-блокноты со скоростью не менее 750 МГц. Вывести: Maker
+SELECT DISTINCT p.maker FROM product p JOIN pc ON p.model = pc.model WHERE pc.speed >= 750 AND maker IN (SELECT maker FROM product p JOIN Laptop l ON p.model = l.model WHERE l.speed >= 750);
 ===============
-
-
+24. Перечислите номера моделей любых типов, имеющих самую высокую цену по всей имеющейся в базе данных продукции.
+SELECT model FROM (SELECT model, price FROM pc UNION SELECT model, price FROM Laptop UNION SELECT model, price FROM Printer) o WHERE price = (SELECT MAX(price) FROM (SELECT price FROM pc UNION SELECT price  FROM Laptop UNION  SELECT price FROM Printer) k)
 ===============
-
-
+25. Найдите производителей принтеров, которые производят ПК с наименьшим объемом RAM и с самым быстрым процессором среди всех ПК, имеющих наименьший объем RAM. Вывести: Maker
+SELECT DISTINCT maker FROM product WHERE model IN (SELECT model FROM pc WHERE ram = (SELECT MIN(ram) FROM pc) AND speed = (SELECT MAX(speed) FROM pc WHERE ram = (SELECT MIN(ram) FROM pc))) AND maker IN (SELECT maker FROM product WHERE type = 'printer');
 ===============
 
 
