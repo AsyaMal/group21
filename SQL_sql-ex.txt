@@ -75,45 +75,26 @@ SELECT model FROM (SELECT model, price FROM pc UNION SELECT model, price FROM La
 25. Найдите производителей принтеров, которые производят ПК с наименьшим объемом RAM и с самым быстрым процессором среди всех ПК, имеющих наименьший объем RAM. Вывести: Maker
 SELECT DISTINCT maker FROM product WHERE model IN (SELECT model FROM pc WHERE ram = (SELECT MIN(ram) FROM pc) AND speed = (SELECT MAX(speed) FROM pc WHERE ram = (SELECT MIN(ram) FROM pc))) AND maker IN (SELECT maker FROM product WHERE type = 'printer');
 ===============
-
-
+26. Найдите среднюю цену ПК и ПК-блокнотов, выпущенных производителем A (латинская буква). Вывести: одна общая средняя цена.
+SELECT AVG(price) AS Avg_p FROM (SELECT model, price FROM pc UNION ALL SELECT model, price FROM laptop) AS price JOIN product p ON price.model = p.model WHERE p.maker = 'A' 
+===============
+27. Найдите средний размер диска ПК каждого из тех производителей, которые выпускают и принтеры. Вывести: maker, средний размер HD.
+SELECT p.maker, avg(pc.hd) as avg_hd from product p join pc on p.model = pc.model where p.maker in (select maker from product where type = 'printer') group by p.maker;
+===============
+28. Используя таблицу Product, определить количество производителей, выпускающих по одной модели.
+SELECT COUNT(maker) AS Q FROM (SELECT DISTINCT maker
+FROM product GROUP BY maker HAVING COUNT(model) = 1) AS prod
+===============
+29. В предположении, что приход и расход денег на каждом пункте приема фиксируется не чаще одного раза в день [т.е. первичный ключ (пункт, дата)], написать запрос с выходными данными (пункт, дата, приход, расход). Использовать таблицы Income_o и Outcome_o.
+select i.point, i.date, inc, out from income_o i left join outcome_o o on i.point = o.point and i.date = o.date union select o.point, o.date, inc, out from income_o i right join outcome_o o on i.point = o.point and i.date = o.date
+===============
+30. В предположении, что приход и расход денег на каждом пункте приема фиксируется произвольное число раз (первичным ключом в таблицах является столбец code), требуется получить таблицу, в которой каждому пункту за каждую дату выполнения операций будет соответствовать одна строка.
+Вывод: point, date, суммарный расход пункта за день (out), суммарный приход пункта за день (inc). Отсутствующие значения считать неопределенными (NULL).
+SELECT point, date, SUM(sum_out), SUM(sum_inc)
+FROM (SELECT point, date, SUM(inc) AS sum_inc, null AS sum_out FROM Income GROUP BY point, date UNION SELECT point, date, null AS sum_inc, SUM(out) AS sum_out from Outcome GROUP BY point, date ) AS t GROUP BY point, date ORDER BY point
 ===============
 
 
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
-
-
-===============
 
 
 
