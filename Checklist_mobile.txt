@@ -1,0 +1,31 @@
+Checklist for testing Mobile Application
+
+1. Compatibility in different devices.
+2. Compatibility in different screen size.
+3. Compatibility in different OS.
+4. Compatibility in different browsers.
+5. Compatibility in different orientation.
+6. GUI for web Apps in different screens and resolutions.
+7. API. Track the App’s requests and responses.
+8. Clarity and readability of application buttons.
+9. Distinguishing the inactive buttons from active buttons.
+10.Font options, zoom-in and out and legibility of app display.
+11.Perform SQL testing.
+12.Perform perfomance testing.
+13.Perform secutity testing.
+14.Run the app on different network conditions: 2G, 3G, 4G, WiFi only, etc.
+15.Checkt the App behaves when mobile app moves from mobile data to WiFi and vice versa.
+16.Validating installation of the App.
+17.Validating uninstallation of the App.
+18.Testing of backups in case of data loss during app upgrades.
+19.Checkt the App behaves in case of different battery level.
+20.Testing the online and offline modes of the App.
+21.Making/Receiving voice calls while the App is running.
+22.Rejecting calls while viewing the application.
+23.Resuming App from the same point as left at the time of switching to another app.
+24.Sending/Receiving messages and alerts while the App is running.
+25.Sending/Receiving Push Notifications and responding to them.
+26.Time taken to launch the application
+27.Application performance at times of peak load conditions.
+
+
