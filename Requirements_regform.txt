@@ -1,0 +1,38 @@
+http://itcareer.pythonanywhere.com/
+1. Required fields: Name, Email, Password
+2. Name_requirements:
+	- allows only latin letters;
+	- allows numbers;
+	- at least one capital letter;
+	- at least one number;
+	- allows special symbol: "-" ;
+	- "space" between words only;
+	- min 1, max 24 characters
+3. Surname_requirements:
+	- allows only latin letters;
+	- allows numbers;
+	- at least one capital letter;
+	- at least one number;
+	- allows special symbol: "-" ;
+	- "space" between words only;
+	- min 1, max 24 characters
+4. Password_requirements:
+	- allows only latin letters;
+	- at least one capital letter;
+	- at least one number;
+	- allows special symbols: "@", "_", ":" ;
+	- not allows "space";
+	- min 8, max 24 characters
+5. Email_requirements:
+	- allows only latin letters;
+	- email should be in the form: "name@domain.domain_zone";
+	- allows special symbols: ".", "_", "-" to "@";
+	- allows special symbol: "." after "@";
+	- special symbols are not allowed at the beginning of the email;
+	- min 5, max 128 characters to "@";
+	- min 2, max 64 characters between "@" and ".";
+	- min 2, max 24 characters after ".";
+6. GUI
+7. Usability
+
+	
