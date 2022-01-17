@@ -1,0 +1,58 @@
+1. Написать программу, умеющую выполнять четыре основных арифметических операции с двумя операндами на основе ввода пользователя.
+2. Контроль корректности входных данных входит в обязанности программы.
+3. Разработать тест кейсы для этой программы и провести тестирование.
+4. Описать найденные баги и внесенные в программу изменения после шага 2 при их наличии.
+
+
+=ID 1
+=Title
+The program performs basic arithmetic operations.
+=Preconditions
+1.Download Calculator.java from https://drive.google.com/drive/folders/1kUykrPH4smpt9fLpE7cQ2evVFLH-8QXf?usp=sharing
+2.Run file Calculator.java
+=Steps
+1.Enter the first number, for example 5
+2.Enter "space" or "enter"
+3.Enter the second number, for example 3
+4.Enter "enter"
+5.Enter the basic arithmetic operation, for example "+"
+=Expected result
+The message 
+"The result:
+5.0 + 3.0 = 8.0"
+appears in the console
+=ID BugReport
+=============
+=ID 2
+=Title 
+The program warns if an incorrect operator is entered
+=Preconditions
+1.Download Calculator.java from https://drive.google.com/drive/folders/1kUykrPH4smpt9fLpE7cQ2evVFLH-8QXf?usp=sharing
+2.Run file Calculator.java
+=Steps
+1.Enter the first number, for example 5
+2.Enter "space" or "enter"
+3.Enter the second number, for example 3
+4.Enter "enter"
+5.Enter special symbol, for example "&"
+6.Enter "enter"
+=Expected result
+The message "Error! Please enter a correct operator" appears in the console
+=ID BugReport 
+=============
+=ID 3
+=Title
+The The program warns if the divisor equals zero
+=Preconditions
+1.Download Calculator.java from https://drive.google.com/drive/folders/1kUykrPH4smpt9fLpE7cQ2evVFLH-8QXf?usp=sharing
+2.Run file Calculator.java
+=Steps
+1.Enter the first number, for example 5
+2.Enter "space" or "enter"
+3.Enter "0"
+4.Enter "enter"
+5.Enter "/"
+=Expected result
+The message "Division by zero is not possible, please change the divisor" appears in the console
+=ID BugReport
+=============
